@@ -1,19 +1,3 @@
-# class Summarization:
-	# def main(a):
-	# 	return a + " peopleeeee"
-	# if __name__ == "__main__":
-	# 	main(a)
-
-
-"""
-REQUIRMENTS IN ORDER TO RUN THE PROGRAM 
-- install python
-- install NLTK and download stopword corpus,wordnet,pos_tag
-- install scikit-fuzzy
-- collections
-- operator, glob, os, re, math,string
-
-"""
 import nltk,glob,os,re,math,string,operator,array
 from collections import Counter
 import numpy as np

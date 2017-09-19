@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+
+{% block experience %}Experience{% endblock %}
+{{query}}
+{{request.query}}
+
+{% block content %}
+	<div class="summaryProblem">
+		Query-focused Multi Document Summarization
+	</div>
+	<div class ="description">
+	<div class ="descriptionHeading">Description about the summarization system </div>
+	<p>This work is done to enable the users to gather information from multiple articles that are discussed about BP oil disaster that was occured on 20th of April 2010 in the Gulf of Mexico, United States. The dataset was created by Giang Binh Tran, Tuan A. Tran, Nam-Khanh Tran, Mohammad Alrifai and Nattiya Kanhabua (<a href="http://www.l3s.de/~gtran/publications/taia2013.pdf">http://www.l3s.de/~gtran/publications/taia2013.pdf</a>),  they make it available on <a href="http://www.l3s.de/~gtran/timeline/">http://www.l3s.de/~gtran/timeline/</a> </p>
+	The user only need to generate the query regarding above disaster and inset it into the bellow bar. The system then gathers information from multiple docs and produces summary that satisfies the users needs. In addition, retrieval model, machine earning and AI methods were used in this work.
+
+	,
+
+
+	</div>
+	<div class="searchingBox">
+		<form  id="myDIV" action="" method="POST" >
+			{% csrf_token %}
+			{{form }}
+		    <input type="submit" id="1" value="SUMMARY" onclick="toggle(this);"/>
+
+		</form>
+	</div>
+		<div class ="summaryResult">
+		SUMMARY RESULT IS SHOWN BELOW
+	</div>
+	{% csrf_token %}
+	{{summary }}
+	<script type="text/javascript">
+ 	function toggle(submit)
+	{
+	  if(document.getElementById("1").value=="OFF"){
+	   document.getElementById("1").value="SUMMARY";}
+
+	  else if(document.getElementById("1").value=="SUMMARY"){
+	   document.getElementById("1").value="OFF";}
+	}
+	</script>
+
+{% endblock %}
+
+

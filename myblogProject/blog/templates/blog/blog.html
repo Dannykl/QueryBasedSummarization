@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block home %}Blog{% endblock %}
+{% block content %}
+    {% for w in posts %}
+        <div class="blogContent">
+            <h1> <a href ="">{{w.title}}</a></h1> 
+            <p> {{w.body |linebreaksbr}} </p>
+            <div class="authorDate">
+                <p> Author: {{ w.author }} </p>
+                <div class="published_date">
+                    <p> Published: {{ w.published_date }} </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,3 @@
+Django
+WebTest==2.0.16
+django-webtest==1.7.7

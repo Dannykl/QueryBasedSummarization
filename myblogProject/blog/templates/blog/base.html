@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<html>
+    <div id="container">
+    <!-- HEADER STARTS HERE -->
+      <div id="header">
+        <head>
+          <title>Automatic Summarisation</title>
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+          
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          
+          <div class="navbar-headerr">
+            <a class="navbar-brand" href="#"><img src="/static/images/one.png" alt="logo" height="72" width="62"></a>
+          </div>
+        </head>
+      </div>
+      <!-- BODY STARTS HERE -->
+      <div id="body">
+        <body>
+          <div class="titleHeader"> 
+            {% block navigation %}
+                 <ul id="nav">
+                    <li><a class="{% block home %}{% endblock %}" href="/">Home</a></li>
+                    <li><a class="{% block experience %}{% endblock %}" href="/experience">Experience</a></li>
+                    <li><a class="{% block myaccount %}{% endblock %}" href="/blog/">Blog</a></li>
+                    <li><a class="{% block emotion %}{% endblock %}" href="/emotion">Emotion</a></li>
+                  
+                 </ul>
+             {% endblock %}
+          </div>
+            {% block content %}
+
+            {% endblock %}
+        </body>
+      </div>
+      <!-- Footer starts here -->
+      <div id="footer">
+        <footer>
+          <div class="footer"> 
+            <p>Copyright © 2017, ፩</p>
+            <p>Contact <a href="mailto:dannykl@hotmail.co.uk">dannykl@hotmail.co.uk</a></p>
+
+          </div>
+        </footer>
+      </div>
+    </div>
+</html>

@@ -1,0 +1,13 @@
+python 3.6
+nltk
+scikit-fuzzy 
+matplotlib
+numpy
+django
+glob
+os
+re
+math
+string
+operator
+array

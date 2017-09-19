@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form name="myFirstForm" method="POST" action="?">
+        
+        <input type="submit" value="submit" />
+    </form>
+    <script>
+        document.forms['myFirstForm'].addEventListener('submit', function (event) {
+            // Do something with the form's data here
+
+            this.style['display'] = 'none';
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>

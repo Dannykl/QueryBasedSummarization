@@ -1,4 +1,4 @@
-The code ideas of this work is to integrate the query focus multi document summarization system with Django application. 
+The core idea of this work is to integrate the query focus multi document summarization system with Django application. 
 The methods that are used in the summarization is lised below:
 1-Query likelihood language modelThe summarization system- this is used to retrieve the documents that are relevant to the query
 2-Data processing such as query expansion and document segmenting
